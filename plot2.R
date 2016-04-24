@@ -13,7 +13,7 @@ data <- electricPower[electricPower$Date %in% c("1/2/2007","2/2/2007"),]
 # Convert the Date and Time variables to Date/Time classes
 data$DateTime <- strptime(paste(data$Date, data$Time, sep=" "),"%d/%m/%Y %H:%M:%S")
 
-# Plot data
+# Plot the data
 plot(data$DateTime, data$Global_active_power, type="l", col="black", xlab="", ylab="Global Active Power (kilowatts)")
 
 # Copy the data to a file

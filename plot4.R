@@ -16,7 +16,7 @@ data$DateTime <- strptime(paste(data$Date, data$Time, sep=" "),"%d/%m/%Y %H:%M:%
 # Set the layaout
 par(mfrow = c(2, 2))
 
-# Plot data
+# Plot the data
 with(data, {
     plot(DateTime, Global_active_power, xlab = "", ylab = "Global Active Power", type = "l")
     plot(DateTime, Voltage, xlab = "datetime", ylab = "Voltage", type = "l")

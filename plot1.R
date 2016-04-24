@@ -10,7 +10,7 @@ electricPower <- read.table(file, header=T, sep=";", na.strings="?")
 # Select the data from 2007-02-01 to 2007-02-02
 data <- electricPower[electricPower$Date %in% c("1/2/2007","2/2/2007"),]
 
-# Plot data
+# Plot the data
 hist(data$Global_active_power, main="Global Active Power", xlab="Global Active Power (kilowatts)", col="red")
 
 # Copy the data to a file

@@ -13,7 +13,7 @@ data <- electricPower[electricPower$Date %in% c("1/2/2007","2/2/2007"),]
 # Convert the Date and Time variables to Date/Time classes
 data$DateTime <- strptime(paste(data$Date, data$Time, sep=" "),"%d/%m/%Y %H:%M:%S")
 
-# Plot data
+# Plot the data
 with(data, {
     plot(DateTime, data$Sub_metering_1, xlab = "", ylab = "Energy sub metering", type = "l")
     lines(DateTime, Sub_metering_2, col = "red")
